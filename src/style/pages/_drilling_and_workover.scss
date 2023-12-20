@@ -1,0 +1,393 @@
+.drill-banner {
+  padding: 10rem 0 21rem;
+  @include media-screen {
+    padding: 10rem 0 20rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @include media-screen {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    width: 76rem;
+    @include media-screen {
+      width: 100%;
+      margin-bottom: 11rem;
+    }
+  }
+  &__subtitle {
+    color: $contrast-color;
+    margin-bottom: 0.8rem;
+  }
+  &__title {
+    padding-bottom: 8rem;
+    border-bottom: solid 0.1rem transparent;
+    border-image: $border-gradient;
+    border-image-slice: 1;
+    margin-bottom: 8rem;
+    @include media-screen {
+      padding-bottom: 3.5rem;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    flex-wrap: wrap;
+    @include media-screen {
+      margin-top: 7rem;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 3rem;
+      column-gap: 16rem;
+    }
+  }
+  &__item {
+    width: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    @include media-screen {
+      width: 20rem;
+    }
+    &-title {
+      text-align: center;
+      color: $text-color;
+    }
+    &-img-box {
+      width: 7.2rem;
+      height: 7.2rem;
+      @include media-screen {
+        width: 12rem;
+        height: 12rem;
+      }
+    }
+  }
+  &__img-box {
+    width: 62.6rem;
+    height: 57rem;
+    position: relative;
+    @include media-screen {
+      width: 100%;
+      height: 64rem;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.rigs-design {
+  padding-bottom: 11rem;
+  position: relative;
+  @include media-screen {
+    padding-bottom: 18rem;
+  }
+  .container {
+    padding: 0;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -17rem;
+    background-image: url(./assets/images/background-svg-1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 60rem;
+  }
+  &__title {
+    @include media-screen {
+      width: 64rem;
+      padding: 0 2rem;
+    }
+  }
+  &__tabs {
+    &-wrapper {
+      margin-top: 6rem;
+      @include media-screen {
+        margin-top: 8rem;
+      }
+    }
+    &-display {
+      position: relative;
+      height: 33.2rem;
+      @include media-screen {
+        margin: 0 2rem;
+      }
+    }
+  }
+  &__tab {
+    &-info-text {
+      width: 72rem;
+      @include media-screen {
+        width: 100%;
+        margin-bottom: 6rem;
+      }
+    }
+    &-title {
+      margin-bottom: 3.2rem;
+      @include media-screen {
+        margin-bottom: 5.2rem;
+      }
+    }
+    &-subtitle {
+      margin-bottom: 1.5rem;
+      margin-top: 4.5rem;
+      @include media-screen {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &-img-box {
+      width: 63rem;
+      height: 33rem;
+      position: relative;
+      @include media-screen {
+        width: 100%;
+        height: 40rem;
+      }
+    }
+    &-img {
+      object-fit: cover;
+      height: 100%;
+    }
+  } 
+}
+
+.land-rigs {
+  padding-bottom: 22rem;
+  padding-top: 10rem;
+  @include media-screen {
+    padding-bottom: 20rem;
+  }
+  &__swiper-wrapper {
+    flex-direction: column;
+    @include media-screen {
+      flex-direction: row;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    @include media-screen {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    @include media-screen {
+      margin-bottom: 8rem;
+    }
+  }
+  &__subtitle {
+    width: 63rem;
+    @include media-screen {
+      width: 100%;
+    }
+  }
+  &__display {
+    height: 60rem;
+    overflow: hidden;
+    @include media-screen {
+      height: 100%;
+    }
+  }
+  &__info-slider {
+    height: 60rem;
+    overflow: hidden;
+    @include media-screen {
+      height: 100%;
+    }
+    &_desc {
+      @include media-screen {
+        display: none;
+      }
+    }
+    &_mob {
+      display: none;
+      @include media-screen {
+        display: block;
+      }
+    }
+  }
+  &__info-slide {
+    display: flex !important;
+    justify-content: space-between;
+    @include media-screen {
+      flex-direction: column;
+    }
+  }
+  &__slide-text {
+    width: 63rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media-screen {
+      width: 100%;
+    }
+  }
+  &__slide-img-box {
+    width: 89.3rem;
+    height: 60rem;
+    position: relative;
+    @include media-screen {
+      width: 100%;
+      height: 48rem;
+      margin-bottom: 6.2rem;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+    .octagon-card {
+      @include octagon-bg(3rem, 3rem);
+    }
+    .octagon-card-border {
+      @include octagon-border(3rem);
+    }
+  }
+  &__info-title {
+    margin-bottom: 6rem;
+    @include media-screen {
+      margin-bottom: 3rem;
+    }
+  }
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: $text-color;
+    @include media-screen {
+      display: none;
+      margin-top: 3.2rem;
+    }
+  }
+  &__info-li {
+    margin-bottom: 1.6rem;
+  }
+  &__slide-more-btn {
+    display: none;
+    @include media-screen {
+      display: block;
+      width: fit-content;
+    }
+  }
+  &__swiper-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 7rem;
+  }
+}
+
+.land-rigs__display {
+  .land-rigs__info-desc {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include media-screen {
+      display: none;
+    }
+  }
+  #triggerWrap{
+    position:absolute;
+    top:0;
+    right:0;
+    width:50px;
+  }
+  #triggerWrap .trigger{
+    width:100%;
+    height: 44rem;
+  }
+  
+  .land-rigs__info-text-wrapper, .land-rigs__info-photo-wrapper{
+    height: 60rem;
+    overflow: hidden;
+  }
+  .land-rigs__info-photo-wrapper {
+    width: 89rem;
+  }
+  .land-rigs__item-photo {
+    position: relative;
+    width: 89rem;
+    height: 60rem;
+  }
+  .land-rigs__info-text-wrapper {
+    width: 63rem;
+  }
+  .land-rigs__item-text {
+    height: 60rem;
+  }
+}
+
+.off-shore {
+  padding-bottom: 24rem;
+  @include media-screen {
+    padding-bottom: 20rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 4rem 0 4rem 13rem;
+    @include media-screen {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__info {
+    width: 63rem;
+    @include media-screen {
+      padding: 4rem 4rem 5rem;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 6rem;
+    @include media-screen {
+      margin-bottom: 4rem;
+    }
+  }
+  &__text {
+    color: $text-color;
+  }
+  &__img-box {
+    background: $dark-purple-bg-color;
+    @include octagon-bg(2rem, 0rem);
+    width: 66.6rem;
+    height: 34rem;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+    @include media-screen {
+      width: 55.6rem;
+      height: 28rem;
+    }
+  }
+  &__border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130rem;
+    height: 100%;
+    z-index: -1;
+    background: $border-gradient;
+    @include octagon-border(3rem);
+    @include media-screen {
+      @include octagon-border(2rem);
+      height: 64.4rem;
+      width: 71rem;
+      left: 2rem;
+    }
+  }
+}

@@ -6,6 +6,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.8rem;
+  @include media-screen {
+    font-size: 2.8rem;
+    padding: 2.4rem 4.8rem;
+    gap: 3.8rem;
+  }
   &_dark {
     background-color: $dark-purple-bg-color;
     &:hover {
@@ -16,6 +21,8 @@
   &_purple {
     background-color: $primary-color;
     overflow: hidden;
+    position: relative;
+    z-index: 0;
     &::before {
       content: '';
       display: block;
@@ -29,12 +36,71 @@
       border-radius: 50%;
       transform: translateY(18rem);
       transition: transform 0.7s linear;
+      @include media-screen {
+        top: calc(50% - 13rem);
+      }
     }
     &:hover {
       &::before {
         transform: translateY(0rem);
-
       }
+    }
+  }
+  &_transp {
+    &:hover {
+      color: $contrast-color;
+    }
+  }
+  svg {
+    width: 2rem;
+    @include media-screen {
+      width: 3rem;
+    }
+  }
+}
+
+.btn-lined {
+  font-family: "Euclid Circular A";
+  @include font(1.8rem, normal, 600);
+  letter-spacing: normal;
+  border-bottom: solid #FFF 0.4rem;
+  color: #FFF;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  &:hover {
+    color: $contrast-color;
+    border-bottom: solid $contrast-color 0.4rem;
+  }
+  @include media-screen {
+    font-size: 2.8rem;
+    line-height: 150%;
+    letter-spacing: 0.7px;
+  }
+}
+
+.btn-arrow {
+  font-family: "Euclid Circular A";
+  @include font(1.8rem, 125%, 600);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.8rem 0;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $contrast-color;
+  }
+  svg {
+    width: 2rem;
+    height: 1rem;
+  }
+  @include media-screen {
+    font-size: 2.8rem;
+    line-height: 143%;
+    letter-spacing: 0.07rem;
+    gap: 3rem;
+    svg {
+      width: 3rem;
+      height: 1.5rem;
     }
   }
 }

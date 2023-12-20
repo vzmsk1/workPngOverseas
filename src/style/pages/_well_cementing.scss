@@ -1,0 +1,106 @@
+.well-cem {
+  padding: 10rem 0 22rem;
+  @include media-screen {
+    padding-bottom: 10rem;
+  }
+
+  .container {
+    display: grid;
+  }
+  &__info {
+    grid-row: 1;
+    grid-column: 1;
+    width: 62.6rem;
+  }
+  &__subtitle {
+    color: $contrast-color;
+    margin-bottom: 0.8rem;
+  }
+  &__title {
+    padding-bottom: 11.7rem;
+    margin-bottom: 11rem;
+    border-bottom: solid 0.1rem transparent;
+    border-image: $border-gradient;
+    border-image-slice: 1;
+    @include media-screen {
+      padding-bottom: 2.4rem;
+      margin-bottom: 8rem;
+    }
+  }
+  &__img-box {
+    grid-row: 1 / 9;
+    grid-column: 2;
+    width: 63rem;
+    height: 67.7rem;
+    position: relative;
+    @include media-screen {
+      grid-row: 2;
+      grid-column: 1;
+      width: 100%;
+      height: 40rem;
+      margin-bottom: 6.4rem;
+    }
+    .octagon-card {
+      @include media-screen {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+  &__wrapper {
+    grid-row: 2;
+    grid-column: 1;
+    width: 73.8rem;
+    height: 35rem;
+    overflow: hidden;
+    @include media-screen {
+      width: 100%;
+      grid-row: 3;
+      grid-column: 1;
+      height: 56rem;
+    }
+  }
+  &__item {
+    height: 44rem;
+    @include media-screen {
+      height: 56rem;
+    }
+    &-title {
+      margin-bottom: 4rem;
+    }
+  }
+  &__display {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+  }
+}
+.well-cem__wrapper {
+  position: relative;
+}
+#triggerWrap{
+  position:absolute;
+  top:0;
+  right:0;
+  width:50px;
+}
+#triggerWrap .trigger{
+  width:100%;
+  height: 44rem;
+  @include media-screen {
+    height: 56rem;
+  }
+}
+
+.well-cem__display{
+  position:fixed;
+  visibility:hidden;
+}
+
+.well-cem__item{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
