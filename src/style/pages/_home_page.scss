@@ -1,7 +1,8 @@
 .main-banner {
-  margin: 17rem 0 22rem;
+  padding: 17rem 0 22rem;
+  overflow: hidden;
   @include media-screen {
-    margin: 9rem 0 22rem;
+    padding: 9rem 0 22rem;
   }
   .container {
     position: relative;
@@ -91,23 +92,23 @@
   }
 
   &__planet {
-    background-image: url(./assets/images/planet.gif);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 141%;
+    // background-image: url(./assets/images/planet.gif);
+    // background-repeat: no-repeat;
+    // background-position: 0 0;
+    // background-size: 141%;
     mix-blend-mode: color-dodge;
     width: 93rem;
     mix-blend-mode: color-dodge;
     position: absolute;
     height: 77rem;
-    top: -10rem;
-    right: -15rem;
+    top: -12rem;
+    right: -20rem;
     @include media-screen {
       position: relative;
-      top: 0;
+      top: -2rem;
       right: 0;
       width: 66rem;
-      height: 60rem;
+      height: 58rem;
       margin: 11rem 0 0;
     }
   }
@@ -1038,6 +1039,24 @@
     .swiper-slide-active {
       width: 76rem !important;
       height: 49rem;
+    }
+  }
+}
+
+// PLANET
+#globeViz {
+  z-index: -1;
+
+  @include media-screen {
+    right: auto;
+    left: 4rem;
+  }
+  canvas {
+    width: 93rem !important;
+    height: 77rem !important;
+    @include media-screen {
+      width: 64rem !important;
+      height: 53rem !important;
     }
   }
 }
