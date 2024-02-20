@@ -1,68 +1,267 @@
 <div class="modal modal-thanks">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__close">
-        <img src="./assets/images/burger-close-icon.svg" alt="x" class="modal__close-icon">
-      </div>
-      <div class="modal__card modal-thanks__card">
-        <p class="modal-thanks__title genl-h2-title">Thank you for your request</p>
-        <p class="modal-thanks__subtitle genl-subtitle-2">Our specialist will contact you shortly to clarify all the details.</p>
-      </div>
-      <div class="modal__border"></div>
-    </div>
-  </div>
+	<div class="modal__inner">
+		<div class="modal__content">
+			<div class="modal__close">
+				<img
+					src="./assets/images/burger-close-icon.svg"
+					alt="x"
+					class="modal__close-icon" />
+			</div>
+			<div class="modal__card modal-thanks__card">
+				<p class="modal-thanks__title genl-h2-title">
+					Thank you for your request
+				</p>
+				<p class="modal-thanks__subtitle genl-subtitle-2">
+					Our specialist will contact you shortly to clarify all the details.
+				</p>
+			</div>
+			<div class="modal__border"></div>
+		</div>
+	</div>
 </div>
-<footer class="footer">
-  <div class="container">
-    <div class="footer__wrapper">
-      <a href="#" class="footer__logo">
-        <img src="./assets/images/logo.svg" alt="PNG logo" class="header__logo-img">
-      </a>
-      <nav class="footer__nav">
-        <div class="footer__nav-section genl-text-reg">
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Drilling & Workover</a>
-          </div>
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Well Сementing</a>
-          </div>
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Managed Pressure Drilling</a>
-          </div>
-        </div>
-        <div class="footer__nav-section genl-text-reg">
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Casing while Drilling and Casing Tunning Tool</a>
-          </div>
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Permanent Mud Circulation System</a>
-          </div>
-        </div>
-        <div class="footer__nav-section genl-text-reg">
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">For Careers</a>
-          </div>
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">For Investors</a>
-          </div>
-        </div>
-        <div class="footer__nav-section genl-text-reg">
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">About us</a>
-          </div>
-          <div class="footer__nav-item">
-            <a href="#" class="footer__nav-link">News</a>
-          </div>
-        </div>
 
-      </nav>
-      <button class="footer__contact-btn btn-rect btn-rect_dark">Contact us
-        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 5.01509L14.9822 1" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19 4.99513L14.9924 9.00002" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M0.999993 4.99512L18.9902 4.99512" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+<div class="modal modal-form">
+	<div class="modal__inner">
+		<div class="modal__content">
+			<div class="modal__close">
+				<img
+					src="./assets/images/burger-close-icon.svg"
+					alt="x"
+					class="modal__close-icon" />
+			</div>
+			<div class="modal__card">
+				<div class="modal-form__content">
+					<p class="modal-form__title">Please Login</p>
+					<form
+						method="post"
+						action=""
+						class="modal-form__form form"
+						id="login">
+						<div class="form__block modal-form__email">
+							<label
+								for="email"
+								class="form__label">
+								Your e-mail
+							</label>
+							<input
+								name="email"
+								type="email"
+								class="form__input" />
+							<div class="form__error-msg">Field must be filled in</div>
+						</div>
+						<div class="form__block modal-form__password">
+							<label
+								for="organization"
+								class="form__label">
+								Password
+							</label>
+							<input
+								name="organization"
+								type="password"
+								class="form__input" />
+							<div class="form__error-msg">Required field. Minimum length 6</div>
+
+							<span class="modal-form__password-icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M14.5319 9.46992L9.47188 14.5299C8.82188 13.8799 8.42188 12.9899 8.42188 11.9999C8.42188 10.0199 10.0219 8.41992 12.0019 8.41992C12.9919 8.41992 13.8819 8.81992 14.5319 9.46992Z"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M17.8237 5.77047C16.0737 4.45047 14.0737 3.73047 12.0037 3.73047C8.47375 3.73047 5.18375 5.81047 2.89375 9.41047C1.99375 10.8205 1.99375 13.1905 2.89375 14.6005C3.68375 15.8405 4.60375 16.9105 5.60375 17.7705"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M8.42188 19.5297C9.56187 20.0097 10.7719 20.2697 12.0019 20.2697C15.5319 20.2697 18.8219 18.1897 21.1119 14.5897C22.0119 13.1797 22.0119 10.8097 21.1119 9.39969C20.7819 8.87969 20.4219 8.38969 20.0519 7.92969"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M15.5075 12.6992C15.2475 14.1092 14.0975 15.2592 12.6875 15.5192"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M9.47 14.5293L2 21.9993"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M22.0013 2L14.5312 9.47"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</span>
+						</div>
+
+						<button class="btn-rect btn-rect_purple modal-form__btn">
+							Login
+							<svg
+								width="20"
+								height="10"
+								viewBox="0 0 20 10"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19 5.01509L14.9822 1"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-miterlimit="10"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M19 4.99513L14.9924 9.00002"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-miterlimit="10"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M0.999993 4.99512L18.9902 4.99512"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-miterlimit="10"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="modal__border"></div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrapper">
+			<a
+				href="#"
+				class="footer__logo">
+				<img
+					src="./assets/images/logo.svg"
+					alt="PNG logo"
+					class="header__logo-img" />
+			</a>
+			<nav class="footer__nav">
+				<div class="footer__nav-section genl-text-reg">
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							Drilling & Workover
+						</a>
+					</div>
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							Well Сementing
+						</a>
+					</div>
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							Managed Pressure Drilling
+						</a>
+					</div>
+				</div>
+				<div class="footer__nav-section genl-text-reg">
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							Casing while Drilling and Casing Tunning Tool
+						</a>
+					</div>
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							Permanent Mud Circulation System
+						</a>
+					</div>
+				</div>
+				<div class="footer__nav-section genl-text-reg">
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							For Careers
+						</a>
+					</div>
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							For Investors
+						</a>
+					</div>
+				</div>
+				<div class="footer__nav-section genl-text-reg">
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							About us
+						</a>
+					</div>
+					<div class="footer__nav-item">
+						<a
+							href="#"
+							class="footer__nav-link">
+							News
+						</a>
+					</div>
+				</div>
+			</nav>
+			<button class="footer__contact-btn btn-rect btn-rect_dark">
+				Contact us
+				<svg
+					width="20"
+					height="10"
+					viewBox="0 0 20 10"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M19 5.01509L14.9822 1"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-miterlimit="10"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+					<path
+						d="M19 4.99513L14.9924 9.00002"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-miterlimit="10"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+					<path
+						d="M0.999993 4.99512L18.9902 4.99512"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-miterlimit="10"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+	</div>
 </footer>
