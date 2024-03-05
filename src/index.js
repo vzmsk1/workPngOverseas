@@ -1,4 +1,4 @@
-import "./index.scss";
+import './index.scss';
 
 // COMPONENTS
 import './js/components/burger';
@@ -18,3 +18,6 @@ import './js/pages/well_cementing';
 import './js/pages/mpd';
 import './js/pages/about_us';
 import './js/pages/career';
+
+//planet
+import './js/components/planet';

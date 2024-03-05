@@ -44,6 +44,8 @@
     "gsap": "^3.12.3",
     "jquery": "^3.7.1",
     "jquery-mask-plugin": "^1.14.16",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "three": "^0.162.0",
+    "three-globe": "^2.31.0"
   }
 }
