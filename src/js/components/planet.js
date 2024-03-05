@@ -80,8 +80,8 @@ const gLabelData = [...Array(N).keys()].map((el, ind) => ({
 	color: 'rgba(173,255,0,1)',
 }));
 
-// const highlitedCountries = ['Afghanistan', 'Belarus', 'Czechia', 'Austria', 'China'];
-const highlitedCountries = [];
+const highlitedCountries = ['Afghanistan', 'Belarus', 'Czechia', 'Austria', 'China'];
+// const highlitedCountries = [];
 
 const colorInterpolator = (t) => `rgba(173,255,0,${1 - t + 0.5})`;
 
