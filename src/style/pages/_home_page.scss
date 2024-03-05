@@ -15,7 +15,8 @@
     width: 80rem;
     padding-bottom: 2rem;
     border-bottom: solid 0.1rem transparent;
-    border-image: $border-gradient;
+    -o-border-image: $border-gradient;
+       border-image: $border-gradient;
     border-image-slice: 1;
     @include media-screen {
       width: 100%;
@@ -188,7 +189,8 @@
   &__title {
     padding: 3rem 0 4rem;
     border-bottom: solid 0.1rem transparent;
-    border-image: $border-gradient;
+    -o-border-image: $border-gradient;
+       border-image: $border-gradient;
     border-image-slice: 1;
     margin-bottom: 6rem;
     @include media-screen {
@@ -625,7 +627,8 @@
   }
   &__info-title {
     border-top: solid 0.2rem transparent;
-    border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
+    -o-border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
+       border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
     border-image-slice: 1;
     padding: 4.5rem 0 3rem;
     text-transform: none;
@@ -818,7 +821,8 @@
           mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
 }
 .animate-plan-circle {
-  animation:p 3s 0.5s both;
+  -webkit-animation:p 3s 0.5s both;
+          animation:p 3s 0.5s both;
   &::before {
     display: block;
   }
@@ -826,6 +830,10 @@
 .plan__circle:before {
   background-size:0 0,auto;
   z-index: 1;
+}
+
+@-webkit-keyframes p {
+  from{--p:0}
 }
 
 @keyframes p {
