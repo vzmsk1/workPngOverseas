@@ -20,4 +20,4 @@ import './js/pages/about_us';
 import './js/pages/career';
 
 //planet
-import './js/components/planet';
+import './js/planet';
