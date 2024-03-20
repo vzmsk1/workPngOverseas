@@ -1,1 +1,1 @@
-export const excludedCountries = ['Russia'];
+export const excludedCountries = ['Russia', 'Belarus'];
