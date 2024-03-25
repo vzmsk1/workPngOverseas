@@ -72,9 +72,12 @@
     @media (max-width: 48em) {
       justify-self: end;
 
+      .header__tel-mobile {
+        display: inline-block;
+      }
+
       .header__tel-mobile,
       .header__user {
-        display: block;
         width: 4.8rem;
         height: 4.8rem;
       }
@@ -117,6 +120,7 @@
 
     .header__drop-wrapper {
       width: 18.4rem;
+      transform: translateX(-20%);
 
       .header__drop-item {
         position: relative;
