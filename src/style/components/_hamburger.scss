@@ -1,17 +1,16 @@
 %hamburger-line {
   display: inline-block;
-  background: #FFF;
+  background: #fff;
   height: 0.6rem;
   width: 100%;
   position: absolute;
-  content: '';
+  content: "";
 }
 
 .hamburger {
   display: inline-block;
   display: none;
   position: relative;
-  margin: auto;
   width: 5.4rem;
   height: 3rem;
   z-index: 20;

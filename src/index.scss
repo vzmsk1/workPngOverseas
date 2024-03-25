@@ -1,6 +1,11 @@
-@import 'style/libs/set';
-@import 'style/libs/twentytwenty';
-@import 'style/abstract/all';
-@import 'style/layouts/all';
-@import 'style/components/all';
-@import 'style/pages/all';
+@import "style/libs/set";
+@import "style/libs/twentytwenty";
+@import "style/abstract/all";
+@import "style/layouts/all";
+@import "style/components/all";
+@import "style/pages/all";
+
+._lock {
+  overflow: hidden;
+  touch-action: none;
+}
