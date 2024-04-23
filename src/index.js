@@ -9,7 +9,7 @@ import "./js/components/modal";
 // UTILS
 import "./js/utils/jquery.mask";
 import "./js/utils/jquery.twentytwenty";
-import "./js/utils/simplebar";
+// import "./js/utils/simplebar";
 
 // PAGES
 import "./js/pages/home-page";
@@ -21,4 +21,4 @@ import "./js/pages/about_us";
 import "./js/pages/career";
 
 //planet
-import "./js/planet";
+// import "./js/planet";

@@ -59,6 +59,7 @@ $(document).ready(function () {
     })
   });
   allSectionsNotFirst.forEach((section, i) => {
+     allSections[0].classList.add('_is-active')
 
     gsap.timeline({
       scrollTrigger:{
@@ -71,6 +72,15 @@ $(document).ready(function () {
       yPercent:-100, 
       duration:0.6, //ease:,
       ease: 'power3.inOut',
+      onStart: () => {
+        allSections.forEach(section => section.classList.remove('_is-active'))
+        allSections[i + 1].classList.add('_is-active')
+      },
+      onReverseComplete: () => {
+        allSections.forEach(section => section.classList.remove('_is-active'))
+        allSections[i].classList.add('_is-active')
+        
+      }
     })
   });
 
