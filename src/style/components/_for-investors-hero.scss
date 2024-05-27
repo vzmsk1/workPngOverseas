@@ -1,0 +1,160 @@
+.for-investors-hero {
+  margin-bottom: 10rem;
+  padding-top: 10rem;
+
+  @media (max-width: 48em) {
+    margin-bottom: 20rem;
+  }
+
+  &__content-wrap {
+    padding: 3rem;
+
+    background: url("./assets/images/bevel.svg") center / 100% 100% no-repeat;
+
+    transform: translateX(6rem);
+
+    @media (max-width: 48em) {
+      margin-bottom: -17rem;
+      margin-left: auto;
+      padding: 2.2rem;
+
+      transform: translateY(-17rem);
+
+      background: url("./assets/images/bevel-m.svg") center / 100% 100%
+        no-repeat;
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: 48em) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 64.7rem;
+    }
+  }
+
+  &__content {
+    padding: 6rem 6rem 6.7rem 6rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    width: 70rem;
+
+    background-color: #494152;
+
+    clip-path: polygon(
+      11% 0,
+      89% 0,
+      100% 11%,
+      100% 89%,
+      89% 100%,
+      11% 100%,
+      0 89%,
+      0 11%
+    );
+
+    @media (max-width: 48em) {
+      padding: 3.6rem;
+
+      row-gap: 0.8rem;
+      width: 59rem;
+
+      clip-path: polygon(
+        7.5% 0,
+        92.5% 0,
+        100% 5.5%,
+        100% 94%,
+        92.5% 100%,
+        7.5% 100%,
+        0 94%,
+        0 5.5%
+      );
+    }
+  }
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @media (max-width: 48em) {
+      row-gap: 4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 135%;
+    color: #babbbd;
+
+    @media (max-width: 48em) {
+      font-size: 2.8rem;
+      line-height: 150%;
+    }
+  }
+
+  &__bg-wrap {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 95%;
+    height: 100%;
+
+    clip-path: polygon(
+      8% 0,
+      91% 0,
+      100% 8%,
+      100% 91%,
+      91% 100%,
+      8% 100%,
+      0 91%,
+      0 8%
+    );
+
+    @media (max-width: 48em) {
+      position: static;
+
+      width: 63rem;
+      height: 59.4rem;
+
+      clip-path: polygon(
+        11% 0,
+        89% 0,
+        100% 11%,
+        100% 89%,
+        89% 100%,
+        11% 100%,
+        0 89%,
+        0 11%
+      );
+    }
+  }
+
+  &__bg {
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.h {
+  &_h3 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+
+    @media (max-width: 48em) {
+      font-size: 4rem;
+      line-height: 120%;
+    }
+  }
+}

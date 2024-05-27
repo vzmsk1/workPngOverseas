@@ -1,0 +1,284 @@
+[data-showmore-content] {
+  transition:
+    grid-template-rows 0.3s ease,
+    margin-bottom 0.3s ease;
+
+  &:not([data-showmore-content="md"]) {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    &._is-active {
+      margin-bottom: 2rem;
+
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &[data-showmore-content="md"] {
+    @media (max-width: 48em) {
+      display: grid;
+      grid-template-rows: 0fr;
+
+      &._is-active {
+        margin-bottom: 2rem;
+
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+}
+[data-showmore-content-inner] {
+  overflow: hidden;
+}
+[data-showmore-btn] {
+  span {
+    &:last-child {
+      display: none;
+    }
+  }
+  &._is-active {
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.for-investors-summary {
+  position: relative;
+
+  margin-bottom: 22rem;
+
+  @media (max-width: 48em) {
+    margin-bottom: 20rem;
+
+    overflow: hidden;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 48.5rem;
+      left: -24rem;
+
+      width: 60rem;
+      height: 60rem;
+
+      background-image: url(./assets/images/Vector55.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @media (max-width: 48em) {
+        top: -1.5rem;
+        left: 48rem;
+
+        width: 65rem;
+        height: 65rem;
+
+        transform: rotate(-84deg);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+
+    @media (max-width: 48em) {
+      row-gap: 4rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+
+  &__body {
+    display: flex;
+    gap: 4rem;
+
+    @media (max-width: 48em) {
+      flex-direction: column-reverse;
+      gap: 8rem;
+    }
+  }
+
+  &__subtitle {
+    color: #c7ff51;
+  }
+
+  &__title {
+    @media (max-width: 48em) {
+      max-width: 48rem;
+
+      font-size: 6.8rem;
+    }
+  }
+
+  &__text-wrap,
+  &__text-inner {
+    &:not([data-showmore-content]) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+
+      @media (max-width: 48em) {
+        row-gap: 4rem;
+      }
+    }
+  }
+
+  &__text-wrap {
+    &:not(&_is-hidden) {
+      margin-bottom: 2rem;
+    }
+
+    &_is-hidden {
+      margin-bottom: 0;
+
+      .for-investors-summary__text-inner {
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 48em) {
+      &:not(&_is-hidden) {
+        margin-bottom: 3.2rem;
+      }
+
+      &_is-hidden {
+        &._is-active {
+          margin-bottom: 3.2rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 135%;
+    color: #babbbd;
+
+    @media (max-width: 48em) {
+      font-size: 2.8rem;
+      line-height: 150%;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+
+    padding: 3rem;
+
+    align-self: flex-start;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(
+        145deg,
+        rgb(199, 255, 81) 0%,
+        rgb(186, 119, 253) 100%
+      );
+      clip-path: polygon(
+        0 4rem,
+        4rem 0,
+        calc(100% - 4rem) 0,
+        100% 4rem,
+        100% calc(100% - 4rem),
+        calc(100% - 4rem) 100%,
+        4rem 100%,
+        0 calc(100% - 4rem),
+        0 4rem,
+        0.15rem 4.045rem,
+        0.15rem calc(100% - 4rem - 0.045rem),
+        4.045rem calc(100% - 0.15rem),
+        calc(100% - 4rem - 0.045rem) calc(100% - 0.15rem),
+        calc(100% - 0.15rem) calc(100% - 4rem - 0.045rem),
+        calc(100% - 0.15rem) 4.045rem,
+        calc(100% - 4rem - 0.045rem) 0.15rem,
+        4.045rem 0.15rem,
+        0.15rem 4.045rem
+      );
+    }
+
+    @media (max-width: 48em) {
+      padding: 2rem 2.4rem;
+
+      &::after {
+        clip-path: polygon(
+          0 5rem,
+          5rem 0,
+          calc(100% - 5rem) 0,
+          100% 5rem,
+          100% calc(100% - 5rem),
+          calc(100% - 5rem) 100%,
+          5rem 100%,
+          0 calc(100% - 5rem),
+          0 5rem,
+          0.15rem 5.045rem,
+          0.15rem calc(100% - 5rem - 0.045rem),
+          5.045rem calc(100% - 0.15rem),
+          calc(100% - 5rem - 0.045rem) calc(100% - 0.15rem),
+          calc(100% - 0.15rem) calc(100% - 5rem - 0.045rem),
+          calc(100% - 0.15rem) 5.045rem,
+          calc(100% - 5rem - 0.045rem) 0.15rem,
+          5.045rem 0.15rem,
+          0.15rem 5.045rem
+        );
+      }
+    }
+  }
+
+  &__image {
+    width: 57rem;
+    height: 43.2rem;
+
+    clip-path: polygon(
+      0 3.6rem,
+      3.6rem 0,
+      calc(100% - 3.6rem) 0,
+      100% 3.6rem,
+      100% calc(100% - 3.6rem),
+      calc(100% - 3.6rem) 100%,
+      3.6rem 100%,
+      0 calc(100% - 3.6rem)
+    );
+
+    object-fit: cover;
+
+    @media (max-width: 48em) {
+      width: 66.2rem;
+      height: 56.2rem;
+
+      clip-path: polygon(
+        0 4rem,
+        4rem 0,
+        calc(100% - 4rem) 0,
+        100% 4rem,
+        100% calc(100% - 4rem),
+        calc(100% - 4rem) 100%,
+        4rem 100%,
+        0 calc(100% - 4rem)
+      );
+    }
+  }
+
+  &__btn {
+  }
+}

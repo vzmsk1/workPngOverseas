@@ -1,0 +1,43 @@
+.for-investors-trust {
+  margin-bottom: 22.7rem;
+
+  @media (max-width: 48em) {
+    margin-bottom: 20rem;
+
+    overflow: hidden;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+    column-gap: 2.4rem;
+  }
+
+  &__swiper {
+    &.swiper {
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    @media (min-width: 48em) {
+      &.swiper-slide {
+        height: 37rem;
+      }
+      .value-card__title {
+        max-width: 26rem;
+      }
+    }
+  }
+}

@@ -18,6 +18,11 @@ function toRem(length) {
   return parseInt(length) / rem();
 }
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 // Hide approach img and make before/after
 $(document).ready(function () {
   if (!document.querySelector(".approach__twenty")) return;
@@ -210,20 +215,14 @@ $(document).ready(function () {
 $(document).ready(function () {
   if (!document.querySelector(".plan")) return;
 
-  const plans = document.querySelectorAll(".plan__graph");
   const graphPrecentList = document.querySelectorAll(".plan__graph-percent");
   const pieDiagramList = document.querySelectorAll(".plan__circle");
-  const optionsGraphObserver = {
-    threshold: [0.95],
-  };
-  const graphObserver = new IntersectionObserver(
-    animateGraphSection,
-    optionsGraphObserver,
-  );
 
-  function animateGraphSection(entry) {
-    entry.forEach((item) => {
-      if (item.isIntersecting) {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".plan",
+      once: true,
+      onEnter: () => {
         if (!graphPrecentList[0].classList.contains("done")) {
           graphPrecentList.forEach((el) => {
             animatePieNumber(el);
@@ -233,14 +232,8 @@ $(document).ready(function () {
         pieDiagramList.forEach((el) => {
           animatePieDiagram(el);
         });
-        // graphObserver.unobserve(item.target);
-      }
-    });
-  }
-  // graphObserver.observe(planSection);
-
-  plans.forEach((planSection) => {
-    graphObserver.observe(planSection);
+      },
+    },
   });
 
   function animatePieDiagram(item) {

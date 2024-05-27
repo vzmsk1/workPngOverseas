@@ -111,7 +111,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".land-rigs",
       pin: true,
-      start: "top top",
+      start: "top -5%",
       end: () => "+=" + quant * scrollStep,
     },
   });
@@ -139,25 +139,12 @@ $(document).ready(function () {
 
   gsap.set(allTrigger, { visibility: "hidden" });
 
+  document
+    .querySelector(".land-rigs__item-text.slider-slide")
+    .classList.add("_is-active");
+
   // ========================
   allSectionsNotFirst.forEach((section, i) => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: allTrigger[i],
-          start: "top top",
-          toggleActions: "play none none reverse",
-        },
-      })
-      .to(section, {
-        yPercent: 0,
-        duration: 0.6, //ease:,
-        ease: "power3.inOut",
-      });
-  });
-  allSectionsNotFirst.forEach((section, i) => {
-    allSections[0].classList.add("_is-active");
-
     gsap
       .timeline({
         scrollTrigger: {
@@ -169,12 +156,16 @@ $(document).ready(function () {
       .to(allSections[i], {
         yPercent: -100,
         duration: 0.6, //ease:,
-        ease: "power3.inOut",
         onStart: () => {
           allSections.forEach((section) =>
             section.classList.remove("_is-active"),
           );
-          allSections[i + 1].classList.add("_is-active");
+          allSections[i + 1] && allSections[i + 1].classList.add("_is-active");
+        },
+        onReverse: () => {
+          allSections.forEach((section) =>
+            section.classList.remove("_is-active"),
+          );
         },
         onReverseComplete: () => {
           allSections.forEach((section) =>
@@ -182,21 +173,15 @@ $(document).ready(function () {
           );
           allSections[i].classList.add("_is-active");
         },
-      });
-  });
-  allSectionsNotFirst.forEach((section, i) => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: allTrigger[i],
-          start: "top top",
-          toggleActions: "play none none reverse",
-        },
       })
+      .to(section, {
+        yPercent: 0,
+        duration: 0.6, //ease:,
+      })
+
       .to(allPhotosNotFirst[i], {
         autoAlpha: 1,
         duration: 0.6,
-        ease: "power3.inOut",
       });
   });
 
@@ -251,9 +236,9 @@ $(document).ready(function () {
       landRigsSwiper.destroy();
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".land-rigs",
+          trigger: ".land-rigs .container",
           pin: true,
-          start: "top top",
+          start: "-20px top",
           end: () => "+=" + quant * scrollStep,
         },
       });

@@ -1,5 +1,62 @@
 .drill-banner {
   padding: 10rem 0 21rem;
+
+  &_employee {
+    position: relative;
+
+    @media (min-width: 48em) {
+      &::before {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+        top: 48.5rem;
+        left: -24rem;
+
+        width: 60rem;
+        height: 60rem;
+
+        background-image: url(./assets/images/Vector55.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .drill-banner {
+      &__title {
+        margin-bottom: 6rem;
+        padding-bottom: 4rem;
+
+        @media (max-width: 48em) {
+          margin-bottom: 8rem;
+        }
+      }
+      &__text {
+        font-size: 2.8rem;
+        line-height: 150%;
+
+        color: #babbbd;
+        text-transform: none;
+
+        @media (min-width: 48em) {
+          max-width: 66.2rem;
+
+          font-size: 1.8rem;
+          line-height: 135%;
+        }
+      }
+    }
+    .for-investors-summary__image-wrap .for-investors-summary__image {
+      width: 57rem;
+      height: 51rem;
+
+      @media (max-width: 48em) {
+        width: 66.2rem;
+        height: 56.2rem;
+      }
+    }
+  }
+
   @include media-screen {
     padding: 10rem 0 20rem;
   }
@@ -137,7 +194,7 @@
     padding: 0;
   }
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -203,7 +260,7 @@
       object-fit: cover;
       height: 100%;
     }
-  } 
+  }
 }
 
 .land-rigs {
@@ -341,18 +398,19 @@
       display: none;
     }
   }
-  #triggerWrap{
-    position:absolute;
-    top:0;
-    right:0;
-    width:50px;
+  #triggerWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
   }
-  #triggerWrap .trigger{
-    width:100%;
+  #triggerWrap .trigger {
+    width: 100%;
     height: 44rem;
   }
-  
-  .land-rigs__info-text-wrapper, .land-rigs__info-photo-wrapper{
+
+  .land-rigs__info-text-wrapper,
+  .land-rigs__info-photo-wrapper {
     height: 60rem;
     overflow: hidden;
   }

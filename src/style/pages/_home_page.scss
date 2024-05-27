@@ -16,7 +16,7 @@
     padding-bottom: 2rem;
     border-bottom: solid 0.1rem transparent;
     -o-border-image: $border-gradient;
-       border-image: $border-gradient;
+    border-image: $border-gradient;
     border-image-slice: 1;
     @include media-screen {
       width: 100%;
@@ -73,9 +73,9 @@
   .about-item__text {
     letter-spacing: 0.09rem;
     position: relative;
-    color: #FFF;
+    color: #fff;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 4rem;
@@ -136,7 +136,7 @@
   &__text {
     width: 65rem;
     br {
-      content: '';
+      content: "";
       display: block;
       margin: 4rem 0;
       @include media-screen {
@@ -190,7 +190,7 @@
     padding: 3rem 0 4rem;
     border-bottom: solid 0.1rem transparent;
     -o-border-image: $border-gradient;
-       border-image: $border-gradient;
+    border-image: $border-gradient;
     border-image-slice: 1;
     margin-bottom: 6rem;
     @include media-screen {
@@ -284,7 +284,7 @@
     color: $contrast-color;
   }
   &__description {
-    color: #FFF;
+    color: #fff;
   }
   &__slider-wrapper {
     overflow: hidden;
@@ -301,7 +301,7 @@
       width: 63rem;
       height: 65rem;
     }
-    &-bottom{
+    &-bottom {
       padding: 3rem 4rem 3rem;
       position: absolute;
       bottom: 0;
@@ -338,7 +338,7 @@
       display: flex;
       align-items: center;
       gap: 2rem;
-      color: #FFF;
+      color: #fff;
       &:hover {
         color: $contrast-color;
       }
@@ -491,7 +491,7 @@
       padding: 2rem 3rem;
       cursor: pointer;
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         position: absolute;
@@ -517,7 +517,7 @@
     }
     &-text {
       width: 50rem;
-      color: #FFF;
+      color: #fff;
     }
   }
   &__display {
@@ -553,7 +553,7 @@
         opacity: 1;
       }
       br {
-        content: '';
+        content: "";
         display: block;
         margin: 2rem 0;
       }
@@ -576,7 +576,7 @@
     padding: 3rem 3rem;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -593,10 +593,10 @@
       padding: 0;
       border-bottom: solid 0.2rem #c8ff5100;
       transition-property: padding;
-      color: #FFF;
+      color: #fff;
       @include advantages-transition;
       &::after {
-        content: '';
+        content: "";
         display: block;
         margin-top: 1.5rem;
         background-image: url(./assets/images/accord-arrow.svg);
@@ -627,8 +627,16 @@
   }
   &__info-title {
     border-top: solid 0.2rem transparent;
-    -o-border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
-       border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
+    -o-border-image: linear-gradient(
+      145deg,
+      rgb(199, 255, 81) 0%,
+      rgb(186, 119, 253) 100%
+    );
+    border-image: linear-gradient(
+      145deg,
+      rgb(199, 255, 81) 0%,
+      rgb(186, 119, 253) 100%
+    );
     border-image-slice: 1;
     padding: 4.5rem 0 3rem;
     text-transform: none;
@@ -636,7 +644,7 @@
   &__info-text {
     color: $text-color;
     br {
-      content: '';
+      content: "";
       display: block;
       padding: 1.5rem 0;
     }
@@ -645,6 +653,73 @@
 
 .plan {
   margin-bottom: 22rem;
+
+  &_for-investors {
+    .plan {
+      &__graphs {
+        &.swiper {
+          width: 100%;
+
+          @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+          }
+        }
+      }
+      &__navigation {
+        margin: 0 auto;
+
+        display: none;
+
+        @media (max-width: 48em) {
+          display: flex;
+          column-gap: 3.2rem;
+        }
+      }
+      &__graph-wrapper {
+        @media (min-width: 48em) {
+          &.swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 7rem;
+            row-gap: 6rem;
+          }
+        }
+      }
+      &__title {
+        margin-bottom: 6rem;
+        padding-bottom: 4rem;
+
+        @media (max-width: 48em) {
+          margin-bottom: 8rem;
+        }
+      }
+      &__text {
+        margin-top: 0;
+
+        &:not([data-showmore-content]) {
+          margin-bottom: 2rem;
+
+          display: flex;
+          flex-direction: column;
+          row-gap: 2rem;
+        }
+
+        [data-showmore-content-inner] {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2rem;
+        }
+      }
+      &__view-all {
+        &[data-showmore-btn] {
+          margin-right: auto;
+
+          display: inline-block;
+        }
+      }
+    }
+  }
+
   @include media-screen {
     margin-bottom: 19rem;
   }
@@ -678,17 +753,19 @@
     margin-top: auto;
     color: $text-color;
     br {
-      content: '';
+      content: "";
       display: block;
       margin: 2rem 0;
     }
     @include media-screen {
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      display: -webkit-box;
-      &.display {
-        -webkit-line-clamp: inherit;
+      &:not([data-showmore-content]) {
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        display: -webkit-box;
+        &.display {
+          -webkit-line-clamp: inherit;
+        }
       }
     }
   }
@@ -697,10 +774,12 @@
     width: 81rem;
     justify-content: space-between;
     @include media-screen {
-      flex-direction: column;
-      width: 100%;
-      margin-top: 6rem;
-      gap: 8rem;
+      &:not(.plan_for-investors &) {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 6rem;
+        gap: 8rem;
+      }
     }
   }
   &__graph {
@@ -746,7 +825,7 @@
     }
   }
   &__graph-subtext {
-    color: #FFF;
+    color: #fff;
     &_purple {
       span {
         color: $primary-color;
@@ -777,7 +856,7 @@
 // Pie diagram display
 
 @property --p {
-  syntax: '<number>';
+  syntax: "<number>";
   inherits: true;
   initial-value: 0;
 }
@@ -785,59 +864,84 @@
 .plan__circle {
   --p: 20;
   --b: 0.7rem;
-  --c: #C7FF51;
+  --c: #c7ff51;
   --w: 36rem;
   --h: 100;
-  --k: #BA77FD;
+  --k: #ba77fd;
   @include media-screen {
     --w: 41rem;
     --b: 1rem;
   }
-  
+
   width: var(--w);
   aspect-ratio: 1;
   position: relative;
 }
-.plan__circle:before, .plan__circle:after {
-  content:"";
-  position:absolute;
-  border-radius:50%;
+.plan__circle:before,
+.plan__circle:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
 }
 .plan__circle:before {
   display: none;
-  inset:0;
+  inset: 0;
   background:
-    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
-    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+    radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b)
+      no-repeat,
+    conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
 }
 .plan__circle:after {
-  inset:0;
+  inset: 0;
   background:
-    radial-gradient(farthest-side,var(--k) 98%,#0000) top/var(--b) var(--b) no-repeat,
-    conic-gradient(var(--k) calc(var(--h)*1%),#0000 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+    radial-gradient(farthest-side, var(--k) 98%, #0000) top/var(--b) var(--b)
+      no-repeat,
+    conic-gradient(var(--k) calc(var(--h) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
 }
 .animate-plan-circle {
-  -webkit-animation:p 3s 0.5s both;
-          animation:p 3s 0.5s both;
+  -webkit-animation: p 3s 0.5s both;
+  animation: p 3s 0.5s both;
   &::before {
     display: block;
   }
 }
 .plan__circle:before {
-  background-size:0 0,auto;
+  background-size:
+    0 0,
+    auto;
   z-index: 1;
 }
 
 @-webkit-keyframes p {
-  from{--p:0}
+  from {
+    --p: 0;
+  }
 }
 
 @keyframes p {
-  from{--p:0}
+  from {
+    --p: 0;
+  }
 }
 
 .news {
@@ -931,7 +1035,6 @@
       height: 12rem;
       @include media-screen {
         -webkit-line-clamp: 9;
-        
 
         height: 37rem;
       }
@@ -945,8 +1048,6 @@
       transition-property: padding;
       transition-duration: 0.3s;
       transition-timing-function: ease;
-
-      
 
       display: flex;
       flex-direction: column;
@@ -1015,10 +1116,9 @@
         font-size: 2.4rem;
       }
       .news__slide-text {
-        color: #FFF;
+        color: #fff;
       }
     }
-    
   }
 }
 
@@ -1037,13 +1137,15 @@
       justify-content: center;
       height: 38rem;
       transform: translateX(-23rem);
-      transition: width .3s ease, height .3s ease;
+      transition:
+        width 0.3s ease,
+        height 0.3s ease;
     }
-    
+
     .swiper-wrapper {
       align-items: center;
     }
-    
+
     .swiper-slide-active {
       width: 76rem !important;
       height: 49rem;

@@ -76,3 +76,16 @@
     0 calc(100% - 3rem)
   );
 }
+.land-rigs__item-text.slider-slide._is-active,
+.well-cem__item.swiper-slide._is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.land-rigs__item-text.slider-slide,
+.well-cem__item.swiper-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
