@@ -221,14 +221,15 @@ $(document).ready(function () {
   gsap.timeline({
     scrollTrigger: {
       trigger: ".plan",
-      once: true,
+      start: "top 30%",
+      end: () => `+=${window.offsetHeight}`,
       onEnter: () => {
-        if (!graphPrecentList[0].classList.contains("done")) {
-          graphPrecentList.forEach((el) => {
-            animatePieNumber(el);
-            el.classList.add("done");
-          });
-        }
+        // if (!graphPrecentList[0].classList.contains("done")) {
+        graphPrecentList.forEach((el) => {
+          animatePieNumber(el);
+          el.classList.add("done");
+        });
+        // }
         pieDiagramList.forEach((el) => {
           animatePieDiagram(el);
         });

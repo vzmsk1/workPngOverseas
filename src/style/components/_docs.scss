@@ -191,15 +191,13 @@
     @media (max-width: 48em) {
       column-gap: 2.4rem;
 
-      svg {
+      img {
         width: 7.6rem;
-        height: 6.4rem;
       }
     }
 
-    svg {
+    img {
       width: 4.4rem;
-      height: 3.2rem;
     }
 
     @media (any-hover: hover) {

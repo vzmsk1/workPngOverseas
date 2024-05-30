@@ -89,3 +89,7 @@
     opacity 0.3s ease,
     visibility 0.3s ease;
 }
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
