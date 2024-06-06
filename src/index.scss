@@ -5,6 +5,16 @@
 @import "style/components/all";
 @import "style/pages/all";
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-bottom: auto;
+}
+
 ._lock {
   overflow: hidden;
   touch-action: none;
